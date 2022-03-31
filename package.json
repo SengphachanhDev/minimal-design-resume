@@ -1,0 +1,20 @@
+{
+  "name": "minimal-design-resume",
+  "version": "1.0.0",
+  "description": "This is my personal resume design and learning for improve myself skill.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass scss/style.scss -o dist/css --style compressed --watch",
+    "prefix": "postcss dist/css/style.css --use autoprefixer -d dist/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["resume", "cv", "minimal design"],
+  "author": "Sengphachanh Chanthavong",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0"
+  }
+}
