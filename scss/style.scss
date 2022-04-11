@@ -21,24 +21,52 @@ body {
 .container {
     width: 980px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1080px) {
+        width: 780px;
+    }
+
+    @media only screen and (max-width: 780px) {
+        width: 100%;
+    }
 }
 
 .left-side {
     width: 45%;
     float: left;
     position: relative;
+
+    @media only screen and (max-width: 1080px) {
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+    }
 }
 
 .right-side {
     width: 55%;
     float: right;
     position: relative;
+
+    @media only screen and (max-width: 1080px) {
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+    }
 }
 
 .row {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+
+    @media only screen and (max-width: 1080px) {
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 720px) {
+        width: 100%;
+    }
 }
 
 .intro {
@@ -46,6 +74,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media only screen and (max-width: 1080px) {
+        align-items: center;
+    }
 
     &--info {
         width: min-content;
@@ -57,12 +89,20 @@ body {
             margin-bottom: 0;
             text-transform: uppercase;
             line-height: 2.7rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 40px; 
+            }
         }
     
         p {
             font-size: 22px;
             font-weight: 400;
             letter-spacing: .15rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 18px; 
+            }
     
             .diamond {
                 width: .5rem;
@@ -72,14 +112,24 @@ body {
                 transform: rotate(45deg);
                 margin: 6px;
                 opacity: .6;
+
+                @media only screen and (max-width: 540px) {
+                    width: .4rem;
+                    height: .4rem; 
+                }
             }
         }
     }
 
     &--img {
         width: 100%;
-        display: block;
+        display: flex;
         margin: 2rem 0;
+        justify-content: flex-start;
+
+        @media only screen and (max-width: 1080px) {
+            justify-content: center;
+        }
 
         .img-portrait {
             display: block;
@@ -92,12 +142,22 @@ body {
             justify-content: center;
             align-items: center;
 
+            @media only screen and (max-width: 540px) {
+                width: 15rem;
+                height: 15rem;
+            }
+
             &--inner {
                 display: block;
                 width: 15rem;
                 height: 15rem;
                 border-radius: 50%;
                 position: relative;
+
+                @media only screen and (max-width: 540px) {
+                    width: 13.5rem;
+                    height: 13.5rem;
+                }
 
                 .img-profile {
                     
@@ -107,7 +167,7 @@ body {
                     background-position: 54% 6%;
                     background-size: 35rem;
                     border-radius: 50%;
-                    opacity: .9;
+                    opacity: .85;
                 }
             }
         }
@@ -116,6 +176,8 @@ body {
 
 .about {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 
     &--header {
         width: 80%;
@@ -126,12 +188,28 @@ body {
         margin-bottom: 2rem;
         text-transform: uppercase;
         letter-spacing: .2rem;
+
+        @media only screen and (max-width: 1080px) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 540px) {
+            font-size: 24px; 
+        }
     }
 
     &--info {
         width: 80%;
         font-size: 16px;
         font-weight: 300;
+
+        @media only screen and (max-width: 1080px) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 540px) {
+            font-size: 14px; 
+        }
     }
 }
 
@@ -139,8 +217,25 @@ body {
     width: 100%;
     margin: 3rem 0;
 
+    @media only screen and (max-width: 1080px) {
+        width: 70%;
+        margin: 4rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 540px) {
+        width: 100%;
+    }
+
     &--items {
         text-align: center;
+
+        @media only screen and (max-width: 1080px) {
+            margin: 0 auto;
+        }
     }
 
     &--circle {
@@ -153,8 +248,17 @@ body {
         justify-content: center;
         align-items: center;
 
+        @media only screen and (max-width: 540px) {
+            width: 4rem;
+            height: 4rem; 
+        }
+
         i {
             font-size: 2rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 1.6rem; 
+            }
         }
     }
 }
@@ -170,14 +274,33 @@ body {
         font-weight: 500;
         font-size: 16px;
 
+        @media only screen and (max-width: 540px) {
+            font-size: 14px; 
+        }
+
         i {
             font-size: 18px;
             margin-left: 1rem;
             margin-right: 1.5rem;
+            display: inline-block;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 16px;
+                margin-left: 0;
+                margin-right: 1rem;
+            }
         }
 
         .fa-location-dot {
-            font-size: 22px;
+            font-size: 20px;
+            margin-left: 1.1rem;
+            margin-right: 1.6rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 17px;
+                margin-left: .1rem; 
+                margin-right: 1.1rem; 
+            }
         }
     }
 }
@@ -195,6 +318,10 @@ body {
         margin-bottom: 2rem;
         text-transform: uppercase;
         letter-spacing: .2rem;
+
+        @media only screen and (max-width: 540px) {
+            font-size: 24px; 
+        }
     }
 
     &--content {
@@ -204,18 +331,30 @@ body {
             font-size: 22px;
             font-weight: 600;
             margin-bottom: .15rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 20px; 
+            }
         }
 
         &--date {
             font-size: 18px;
             font-weight: 400;
             margin-bottom: 1rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 16px; 
+            }
         }
 
         &--info {
             font-size: 16px;
             font-weight: 300;
             margin-bottom: 3rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 14px; 
+            }
 
             ul {
                 margin-left: 2rem;
@@ -238,6 +377,10 @@ body {
         margin-bottom: 2rem;
         text-transform: uppercase;
         letter-spacing: .2rem;
+
+        @media only screen and (max-width: 540px) {
+            font-size: 26px; 
+        }
     }
 
     &--content {
@@ -247,18 +390,30 @@ body {
             font-size: 22px;
             font-weight: 600;
             margin-bottom: .15rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 20px; 
+            }
         }
 
         &--date {
             font-size: 18px;
             font-weight: 400;
             margin-bottom: 1rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 16px; 
+            }
         }
 
         &--info {
             font-size: 16px;
             font-weight: 300;
             margin-bottom: 3rem;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 14px; 
+            }
         }
     }
 }
@@ -270,6 +425,10 @@ body {
         width: 100%;
         border-bottom: .15rem solid #393939;
         margin-top: 2.5rem;
+
+        @media only screen and (max-width: 540px) {
+            font-size: 26px; 
+        }
     }
 
     &--content {
@@ -282,15 +441,32 @@ body {
             text-align: center;
             padding: 2rem 0;
             margin: 0 1.5rem;
+
+            @media only screen and (max-width: 540px) {
+                margin: 0 1rem; 
+                padding-bottom: .5rem;
+            }
             
             i {
                 font-size: 1.6rem;
+
+                @media only screen and (max-width: 540px) {
+                    font-size: 1.2rem; 
+                }
+
+                @media only screen and (max-width: 720px) {
+                    font-size: 1.4rem; 
+                }
             }
     
             h3 {
                 font-weight: 500;
                 font-size: 16px;
                 margin-top: .6rem;
+
+                @media only screen and (max-width: 540px) {
+                    font-size: 14px; 
+                }
             }
         }
     }
